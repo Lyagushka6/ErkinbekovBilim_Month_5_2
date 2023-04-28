@@ -1,5 +1,6 @@
 package com.example.erkinbekovbilim_month_5_2
 
+import com.example.erkinbekovbilim_month_5_2.api.LoveApi
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 

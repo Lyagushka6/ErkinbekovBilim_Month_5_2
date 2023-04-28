@@ -1,6 +1,5 @@
-package com.example.erkinbekovbilim_month_5_2
+package com.example.erkinbekovbilim_month_5_2.ui.score
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.erkinbekovbilim_month_5_2.databinding.FragmentLoveScoreBinding
+import com.example.erkinbekovbilim_month_5_2.ui.calculator.LoveCalculatorFragment
 
 class LoveScoreFragment : Fragment() {
 

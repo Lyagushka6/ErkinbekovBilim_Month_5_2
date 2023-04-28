@@ -1,4 +1,4 @@
-package com.example.erkinbekovbilim_month_5_2
+package com.example.erkinbekovbilim_month_5_2.model
 
 import com.google.gson.annotations.SerializedName
 

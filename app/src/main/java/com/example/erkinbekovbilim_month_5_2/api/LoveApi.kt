@@ -1,5 +1,6 @@
-package com.example.erkinbekovbilim_month_5_2
+package com.example.erkinbekovbilim_month_5_2.api
 
+import com.example.erkinbekovbilim_month_5_2.model.LoveModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header

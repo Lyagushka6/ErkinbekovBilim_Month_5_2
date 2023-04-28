@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/loveCalculatorFragment"
-        android:name="com.example.erkinbekovbilim_month_5_2.LoveCalculatorFragment"
+        android:name="com.example.erkinbekovbilim_month_5_2.ui.calculator.LoveCalculatorFragment"
         android:label="Love Calculator"
         tools:layout="@layout/fragment_love_calculator" />
     <fragment
         android:id="@+id/loveScoreFragment"
-        android:name="com.example.erkinbekovbilim_month_5_2.LoveScoreFragment"
+        android:name="com.example.erkinbekovbilim_month_5_2.ui.score.LoveScoreFragment"
         android:label="Love Score"
         tools:layout="@layout/fragment_love_score" />
 </navigation>

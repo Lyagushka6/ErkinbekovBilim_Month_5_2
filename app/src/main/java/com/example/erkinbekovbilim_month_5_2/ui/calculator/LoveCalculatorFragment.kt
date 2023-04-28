@@ -1,4 +1,4 @@
-package com.example.erkinbekovbilim_month_5_2
+package com.example.erkinbekovbilim_month_5_2.ui.calculator
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,10 @@ import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.example.erkinbekovbilim_month_5_2.R
+import com.example.erkinbekovbilim_month_5_2.RetrofitService
 import com.example.erkinbekovbilim_month_5_2.databinding.FragmentLoveCalculatorBinding
+import com.example.erkinbekovbilim_month_5_2.model.LoveModel
 import retrofit2.Call
 import retrofit2.Response
 
