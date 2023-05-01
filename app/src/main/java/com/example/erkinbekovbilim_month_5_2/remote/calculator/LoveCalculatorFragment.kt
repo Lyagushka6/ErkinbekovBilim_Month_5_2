@@ -1,25 +1,24 @@
-package com.example.erkinbekovbilim_month_5_2.ui.calculator
+package com.example.erkinbekovbilim_month_5_2.remote.calculator
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
+import com.example.erkinbekovbilim_month_5_2.viewModel.LoveViewModel
 import com.example.erkinbekovbilim_month_5_2.R
-import com.example.erkinbekovbilim_month_5_2.RetrofitService
 import com.example.erkinbekovbilim_month_5_2.databinding.FragmentLoveCalculatorBinding
-import com.example.erkinbekovbilim_month_5_2.model.LoveModel
-import retrofit2.Call
-import retrofit2.Response
-
 
 
 class LoveCalculatorFragment : Fragment() {
 
     lateinit var binding: FragmentLoveCalculatorBinding
+
+    val viewModel : LoveViewModel by viewModels()
 
     companion object{
         const val KEY_FOR_FNAME = "firstName"
@@ -29,7 +28,7 @@ class LoveCalculatorFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLoveCalculatorBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -42,7 +41,32 @@ class LoveCalculatorFragment : Fragment() {
     private fun loveCalculate() {
         with(binding) {
             btnCalculate.setOnClickListener {
-                RetrofitService().api.percentageNames(
+                viewModel.liveLove(firstNameEd.text.toString(), secondNameEd.text.toString()
+                ).observe(this@LoveCalculatorFragment.viewLifecycleOwner, Observer {loveModel->
+                    findNavController().navigate(
+                        R.id.loveScoreFragment, bundleOf(
+                            KEY_FOR_FNAME to loveModel.firstName,
+                            KEY_FOR_SNAME to loveModel.secondName,
+                            KEY_FOR_PERCE to loveModel.percentage,
+                        )
+                    )
+                    firstNameEd.text?.clear()
+                    secondNameEd.text?.clear()
+                })
+
+
+
+
+
+
+
+
+
+
+
+
+
+                /*RetrofitService().api.percentageNames(
                     firstNameEd.text.toString(),
                     secondNameEd.text.toString()
                 ).enqueue(object : retrofit2.Callback<LoveModel> {
@@ -61,7 +85,7 @@ class LoveCalculatorFragment : Fragment() {
                     override fun onFailure(call: Call<LoveModel>, t: Throwable) {
                         Log.e("ololo", "onFailure: ${t.message}")
                     }
-                })
+                })*/
             }
         }
     }

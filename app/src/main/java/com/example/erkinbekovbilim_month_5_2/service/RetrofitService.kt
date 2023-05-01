@@ -1,4 +1,4 @@
-package com.example.erkinbekovbilim_month_5_2
+package com.example.erkinbekovbilim_month_5_2.service
 
 import com.example.erkinbekovbilim_month_5_2.api.LoveApi
 import retrofit2.Retrofit

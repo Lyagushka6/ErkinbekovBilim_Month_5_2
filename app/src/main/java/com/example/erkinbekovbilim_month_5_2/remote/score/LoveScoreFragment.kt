@@ -1,4 +1,4 @@
-package com.example.erkinbekovbilim_month_5_2.ui.score
+package com.example.erkinbekovbilim_month_5_2.remote.score
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.erkinbekovbilim_month_5_2.databinding.FragmentLoveScoreBinding
-import com.example.erkinbekovbilim_month_5_2.ui.calculator.LoveCalculatorFragment
+import com.example.erkinbekovbilim_month_5_2.remote.calculator.LoveCalculatorFragment
 
 class LoveScoreFragment : Fragment() {
 
