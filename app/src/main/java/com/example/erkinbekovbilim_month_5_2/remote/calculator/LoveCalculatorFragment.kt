@@ -54,18 +54,7 @@ class LoveCalculatorFragment : Fragment() {
                     secondNameEd.text?.clear()
                 })
 
-
-
-
-
-
-
-
-
-
-
-
-
+                //Надо:)
                 /*RetrofitService().api.percentageNames(
                     firstNameEd.text.toString(),
                     secondNameEd.text.toString()
